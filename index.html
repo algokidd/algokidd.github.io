@@ -33,13 +33,13 @@
   
   
     <script>
-        function Refresh(){
-            var iframe = document.getElementById('iframeid');
-            var iframe1 = document.getElementById('iframeid1');
-            iframe.reload(true);
-            iframe1.reload(true);
-       }
-       setTimeout('Refresh()', 5000);
+        window.onload = function() {
+        var frameRefreshInterval = setInterval(function() {
+        document.getElementById("iframeid").src = document.getElementById("iframeid").src
+        document.getElementById("iframeid1").src = document.getElementById("iframeid1").src
+    }, 2000);
+    // any other code
+}
     </script>
 </body>
 </html>

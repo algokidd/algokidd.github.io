@@ -35,11 +35,13 @@
            value="Refresh" />
   
     <script>
-        function reload() {
-            document.getElementById('iframeid').src += '';
-            document.getElementById('iframeid1').src += '';
-        }
-        btn.onclick = reload;
+        funtion Refresh(){
+            var iframe = document.getElementById('iframeid');
+            var iframe1 = document.getElementById('iframeid1');
+            iframe.reload(true);
+            iframe1.reload(true);
+       }
+       setTimeout('Refresh()', 5000);
     </script>
 </body>
 </html>

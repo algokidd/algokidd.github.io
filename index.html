@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <iframe width="100%" height="500" src="https://www.tinkercad.com/embed/7DngV0OIFOf?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <iframe id="iframeid" width="100%" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1328452/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
+                
+
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <iframe id="iframeid" width="100%" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1328452/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+            </div>
+        </div>
+    
+    <!-- <iframe width="550" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1328452/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
+    <iframe width="550" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1328452/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe> -->
+    </div>
+    <input type="button" 
+           id="btn" 
+           value="Refresh" />
+  
+    <script>
+        function reload() {
+            document.getElementById('iframeid').src += '';
+        }
+        btn.onclick = reload;
+    </script>
+</body>
+</html>
